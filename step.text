@@ -11,9 +11,26 @@ gitignore 要忽略的gie文件和文件夹
 next-env.d.ts   next.js的ts类型声明文件
 tsconfig.json  typescript配置文件
 
+blog文件夹 演示动态路由  [id] 动态路由参数
+(hero) 路由组 可以共享相同的布局
+dashboard 基本操作
+@team @analytics 平行路由 
+(..)photo  
+
 服务端组件和客户端组件
-默认情况下nextjs的服务端组件  你可以在组件顶部添加 'use client' 注释来将其标记为客户端组件.
+默认情况下nextjs的服务端组件  你可以在组件顶部添加 'use client' 注释来将其标记为客户端组件. 
 
 "start": "next start", 用于打包完成后查看打包结果
 
 template.tsx 和 layout.tsx(保留) 文件 区别在与路由跳转是否保留状态   
+
+favicon.ico  网站图标 没反应需要清除浏览器缓冲
+
+not-found.tsx 404页面  https://www.creative-tim.com/ 可以参考设计
+
+路由组 通过小括号()包裹的组件   会共享相同的布局   可以解决404携带上组件问题 因为not-found访问不到路由组里面的layout
+
+使用ant design组件库  处理组件样式闪烁问题    npm install @ant-design/nextjs-registry --save
+
+luyout文件 一个文件夹就是一个layout 可以共享相同的布局  最后都会在layout呈现 可以在layout文件书写统一样式 
+

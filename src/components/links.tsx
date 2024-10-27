@@ -4,21 +4,24 @@ import Link from 'next/link'
 const linkData = [
   {
     name: 'Performnce',
-    href: '/dashboard/Performnce',
+    href: '/Performnce',
   },
   {
     name: 'Rellability',
-    href: '/dashboard/Rellability',
+    href: '/Rellability',
   },
   {
     name: 'Scale',
-    href: '/dashboard/Scale',
+    href: '/Scale',
+  },
+  {
+    name: 'About',
+    href: '/dashboard/about',
   },
 ]
 
 export function Links() {
   const pathname = usePathname()
-
   return (
     <div className='absolute w-full z-10'>
       <div className='flex justify-between container mx-auto text-black p-8'>

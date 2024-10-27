@@ -1,7 +1,9 @@
 'use client'// 指定客户端组件
 import { useState } from "react";
 import Links from "@/components/links";
+import { Inter } from 'next/font/google' //
 
+const inter = Inter({ subsets: ['latin'] }) //
 
 
 export default function DashboardLayout({
@@ -12,7 +14,7 @@ export default function DashboardLayout({
   const [count, setCount] = useState(0);
 
   return (
-    <div>
+    <div className="{inter.className}">
       <Links/>
      
       {/* <div>
