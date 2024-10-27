@@ -4,6 +4,7 @@ app 应用路由器
 pages 页面
 components 组件
 public  静态资源
+1231
 
 next.config.ts  配置文件
 package.json  项目依赖项和脚本
