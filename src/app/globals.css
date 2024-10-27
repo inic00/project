@@ -25,3 +25,7 @@ body {
     text-wrap: balance;
   }
 }
+.link.active {
+  font-weight: bold;
+  color: red;
+}
