@@ -33,8 +33,12 @@ const products = [
 export default function ProductPage({params}:{params:{id:string}}) {
  const product = products.find((product) => product.id === Number(params.id))!
   return <div className="flex flex-col items-center justify-center h-screen">
-    <img src={product.imageSrc} alt={product.imageAlt} className="w-1/2 h-1/2" />
-    <h1>{product.name}</h1>
+    <img width={300} height={300} src={product.imageSrc} alt={product.imageAlt} className="w-1/2 h-1/2" />
+   
+    <div className='border-2 border-dashed border-gray-500 rounded-lg p-3 mt-6'>
+       <h1>{product.name}</h1>
     <p>{product.price}</p>
+
+    </div>
   </div>;
 }

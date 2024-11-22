@@ -1,6 +1,7 @@
+"use client"
 import React from 'react'
 import  Image  from "next/image";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';//钩子允许您在函数组件中访问路由对象 
 
 
 const products = [
@@ -33,12 +34,12 @@ const products = [
       imageAlt: "Hand holding black machined steel mechanical pencil with brass tip and top."
     }
   ];
-export default function Page({params}:{params:{id:string}}) {
+  export default function Page({params}:{params:{id:string}}) {
     const product = products.find((product) => product.id === Number(params.id))!
-    const router = useRouter()
+    const router =  useRouter()
     // 点击其他地方则返回
-     return <div className="flex items-center justify-center fixed inset-0 bg-gray-500/[.8]" onClick={router.back} >
-      {/* 点击图片则进入详情页 */}
-     <Image src={product.imageSrc} alt={product.imageAlt} layout="fill" objectFit="cover" onClick={e => e.stopPropagation} />
-     </div>;
+     return <div className="flex items-center justify-center fixed inset-0 bg-gray-500/[.8]"  onClick={router.back}>
+      {/* 点击图片不会关 */}
+     <Image className='rounded-lg' width={300} height={300}  src={product.imageSrc} alt={product.imageAlt}  onClick={e=>e.stopPropagation}/>
+    </div>;
    }
